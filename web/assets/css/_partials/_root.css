@@ -1,0 +1,20 @@
+:root {
+    --primary: #FFF;
+    --secondary: #00568A;
+    --tertiary: #009EFF;
+    --font:Verdana,Geneva, Tahoma, sans-serif;
+    --body: #ECF9FF;
+    --editicon: #FF6969;
+    --saveicon:#0002A1;
+    --addtickethover:#03C988;
+    --addticketfontsize: 15px;
+    --sidebarbgcolor:#CBEBFE;
+    --sidebarAcolor: #000000;
+    --sidebarHovercolor:#7E7C7C;
+    --tabletreven:#DDD;
+    --tablepanelborder: 1px solid #DDD;
+    --trcolor:#4C4C6D;
+    --mobilefontsize:12px;
+    --tabletfontsize:15px;
+    --desktopfontsize:20px;
+}

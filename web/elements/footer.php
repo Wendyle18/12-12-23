@@ -1,0 +1,1 @@
+<script src="/web/assets/js/dashboard.js"></script>

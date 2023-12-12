@@ -1,0 +1,1496 @@
+  *{
+      margin: 0;
+      padding: 0;
+      
+      
+  }
+
+  body {
+    background-color: var(--body);
+    font-family: var(--font);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+  }
+
+
+
+
+
+  @media screen and (max-width: 720px){
+
+    /* Header mobile */
+    header {
+      background-color: var(--tertiary);
+      display: inline-block;
+      min-width: 100%;
+      width: 100%;
+      height: 90px;
+      position: relative;
+  }
+
+  /* Hamburger Icon */
+    
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: space-between;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu-items {
+    color: white;
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100px;
+    padding: 10px;
+    background-color: #00568A;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+
+.menu-items li {
+  margin-top: 50%;
+  padding: 20px;
+}
+.menu-items li a{
+  color: var(--primary);
+  text-decoration: none;
+}
+.menu-items li a:hover{
+  text-decoration: underline;
+}
+
+
+.logout{
+  position: absolute;
+  bottom: 15%;
+}
+
+  
+
+
+.menu-icon.clicked .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: white;
+}
+
+.menu-icon.clicked .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.clicked .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #fff;
+}
+
+.menu-icon.clicked + .menu-items {
+  display: block;
+  height: 100vh;
+  position: absolute;
+  top:99%;
+  left: 0;
+  animation: slideDown 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    
+    /* End of Hamburger Icon */
+    h1{
+      
+        font-size: 35px;
+        color: var(--primary);
+        margin: 25px 30px 30px 35%;
+        font-weight: 600;
+        letter-spacing: 2px;
+      
+    }
+  input[type=search] {
+      border-radius: 5px;
+      min-width: 15vw;
+      max-width: 25vw;
+      float: right;
+      padding: 10px;
+      border: none;
+      margin: 30px;
+      font-size: 17px;
+      display: none;
+    }
+    
+    input[type=search]::placeholder{
+      font-size: 12px;
+      text-align: center;
+    }
+    /* End of Header Mobile */
+
+
+
+
+          /*content*/
+          .sidebar{
+            display: none;
+          }
+
+          .container{
+            height: 100vh;
+            position: relative;
+            width: 100%;
+          
+          }
+          /*succesful Submitted*/
+          .succesfulSubmitted{
+              display: none;
+              border-radius: 2px;
+              position: absolute;
+              top: 2%;
+              left: 15%;
+              background-color: var(--addtickethover);
+              min-width: 70%;
+              height: 30px;
+          }
+          .succesfulSubmitted h3{
+              font-size: 12px;
+              font-weight: 300;
+              text-align: center;
+              margin: 7px;
+              letter-spacing: 1px;
+          }
+          /* End of succesful Submitted */
+
+
+          /* Add Ticket Panel */
+          .addticketPanel{
+            display: none;
+            background-color: var(--primary);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            width: 60%;
+            height: 40vh;
+            position: absolute;
+            top: 20%;
+            left: 21%;
+            border-radius: 5px 5px 0 0;
+            z-index: 1;
+          }
+          .addticketHeader{
+            position: absolute;
+            display: inline;
+            color: var(--primary);
+            background-color: var(--tertiary);
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            height: 50px;
+          }
+
+          .addticketHeader h2{
+            font-size: 15px;
+            font-weight: 200;
+            margin: 15px;
+          }
+         .addticketHeader a i{
+          color: var(--primary);
+          font-size: 20px;
+          position: absolute;
+          left: 90%;
+          top: 30%;
+         }
+         .formPanel{
+         
+          width: 100%;
+          height: 32vh;
+          position: absolute;
+          top: 15%;
+         }
+         .formPanel h5{
+          font-size: 12px;
+          font-weight: 200;
+          margin: 10px;
+         }
+        .formPanel form{
+          box-sizing: border-box;
+          display: block;
+          margin: 15px;
+          padding: 5px;
+        }
+      .formPanel form label{
+        font-size: 12px;
+        margin-left: 5px;
+      }
+      .formPanel form select{
+        font-size: 10px;
+        width: 80%;
+        height: 25px;
+        margin: 12px;
+        margin-left: 10%;
+      }
+      .formPanel form input[type=text]{
+        font-size: 10px;
+        width: 80%;
+        height: 8vh;
+        margin: 12px;
+        margin-left: 10%;
+      }
+      .formPanel form input[type=submit]{
+        text-align: center;
+        border-radius: 2px;
+        position: absolute;
+        font-size: 12px;
+        margin-top: 8px;
+        min-width: 15%;
+        min-height: 2vh;
+        color: var(--primary);
+        padding: 3px;
+        background-color: var(--addtickethover);
+        border: var(--addtickethover);
+        left: 72%;
+      }
+
+/* End of addTicket Panel */
+
+
+          .panel{
+            box-sizing: border-box;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            margin: 25px 0 0 0;
+            padding: 25px;
+          }
+          .addTicket{
+            box-sizing: border-box;
+            background-color:var(--secondary);
+            border: var(--secondary);
+            border-radius: 4px;
+            color: var(--primary);
+            margin-top: 2%;
+            margin-left:5% ;
+            padding: 5px;
+            position: relative;
+            min-height: fit-content;
+            height: fit-content;
+            font-size: var(--mobilefontsize);
+            width: 15%;
+            cursor: pointer;
+          }
+
+          .addTicket:hover{
+            background-color: var(--addtickethover);
+
+          }
+          .filterIcon{
+            color: var(--secondary);
+            font-size: 15px;
+            height: 22px;
+            width: 100px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 12.5%;
+            left: 72%;
+            cursor: pointer;
+            
+          }
+          .filterIcon i{
+            margin-left: 5px;
+          }
+          .tablePanel{
+            overflow: auto;
+            background-color: var(--primary);
+            box-sizing: border-box;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            position: absolute;
+            top: 15%;
+            left: 18%;
+            right: 20%;
+            width: 65%;
+            height: 65vh;
+            border: var(--tablepanelborder);
+            border-radius: 10px;
+          }
+
+
+        table {
+          border: 0;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          table-layout: fixed;
+        }
+
+        table caption {
+          font-size: 1.3em;
+        }
+          table thead {
+            border-collapse: collapse;
+            color: var(--secondary);
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+          }
+          
+
+        table tr {
+            border-collapse: collapse;
+            color: var(--trcolor);
+            display: block;
+            margin-bottom: .625em;
+            padding: 4px;
+          }
+          table tr:nth-of-type(even){
+            background-color: var(--tabletreven);
+          }
+
+          table tr:hover{
+            background-color: var(--tertiary);
+          }
+
+        table th,
+        table td {
+          padding: .625em;
+          text-align: center;
+        }
+          table td {
+            display: block;
+            font-size: .8em;
+            text-align: right;
+          }
+            table td::before {
+        
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          
+          table td:last-child {
+            border-bottom: 0;
+          }
+
+        table th {
+          font-size: .85em;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+        }
+  /* End of Content */
+      }
+
+
+
+
+
+  @media screen and (min-width: 720px) and (max-width: 1080px){
+
+    /* Header for Tablet */
+    header {
+      background-color: var(--tertiary);
+      display: inline-block;
+      min-width: 100%;
+      width: 100%;
+      height: 90px;
+      position: relative;
+  }
+
+    /* Hamburger Icon */
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      float: left;
+      justify-content: space-between;
+      position: absolute;
+      top: 35%;
+      left: 5%;
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      position: relative;
+    }
+    .bar {
+      width: 100%;
+      height: 4px;
+      background-color: white;
+      transition: transform 0.3s ease-in-out;
+    }
+    .menu-items {
+      color: white;
+      display: none;
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: 150px;
+      padding: 10px;
+      background-color: #00568A;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      list-style: none;
+  }
+  
+  .menu-items li {
+    text-align: center;
+    margin-top: 50%;
+    padding: 20px;
+  }
+  .menu-items li a{
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .menu-items li a:hover{
+    text-decoration: underline;
+  }
+  
+  
+  li .logout{
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+    left: 15%;
+  }
+    
+
+  
+  
+  .menu-icon.clicked .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: white;
+  }
+  
+  .menu-icon.clicked .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.clicked .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #fff;
+  }
+  
+  .menu-icon.clicked + .menu-items {
+    display: block;
+    height: 100vh;
+    position: absolute;
+    top:99%;
+    left: 0;
+    animation: slideDown 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+    /* End of Hamburger Icon */
+
+    h1{
+      text-align: center;
+      justify-content: center;
+      font-size: 35px;
+      color: var(--primary);
+      margin: 20px 30px 30px 35%;
+      font-weight: 600;
+      width: 30%;
+    }
+  input[type=search] {
+      border-radius: 5px;
+      min-width: 15vw;
+      max-width: 25vw;
+      float: right;
+      padding: 10px;
+      border: none;
+      margin: 25px;
+      font-size: 17px;
+    
+    }
+    
+    input[type=search]::placeholder{
+      font-size: 12px;
+      text-align: center;
+    }
+    input[type=search]:focus{
+      outline-color: var(--secondary);
+    }
+    
+    /* End of header */
+
+
+
+    /* Content for Tablet */
+    .sidebar{
+      display: none;
+    }
+  
+
+    .container{
+      height: 100vh;
+      position: relative;
+      width: 100%;
+    
+    }
+         /*succesful Submitted*/
+         .succesfulSubmitted{
+          display: none;
+          border-radius: 2px;
+          position: absolute;
+          top: 2%;
+          left: 20%;
+          background-color: var(--addtickethover);
+          max-width: 65%;
+          width: 60%;
+          height: 30px;
+        }
+        .succesfulSubmitted h3{
+          font-size: 12px;
+          font-weight: 300;
+          text-align: center;
+          margin: 7px;
+          letter-spacing: 1px;
+        }
+        /* End of succesful Submitted */
+
+
+     /* Add Ticket Panel */
+     .addticketPanel{
+      display: none;
+      background-color: var(--primary);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      min-width: 60%;
+      height: 40vh;
+      position: absolute;
+      top: 20%;
+      left: 21%;
+      border-radius: 5px 5px 0 0;
+      z-index: 1;
+    }
+    .addticketHeader{
+      position: absolute;
+      display: inline;
+      color: var(--primary);
+      background-color: var(--tertiary);
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      height: 50px;
+    }
+
+    .addticketHeader h2{
+      font-size: 18px;
+      font-weight: 200;
+      margin: 15px;
+    }
+   .addticketHeader a i{
+    color: var(--primary);
+    font-size: 20px;
+    position: absolute;
+    left: 92%;
+    top: 30%;
+   }
+   .formPanel{
+   
+    width: 100%;
+    height: 32vh;
+    position: absolute;
+    top: 15%;
+   }
+   .formPanel h5{
+    font-size: 14px;
+    font-weight: 200;
+    margin: 10px;
+   }
+  .formPanel form{
+    box-sizing: border-box;
+    display: block;
+    margin: 15px;
+    padding: 5px;
+  }
+.formPanel form label{
+  font-size: 13px;
+  margin-left: 5px;
+}
+.formPanel form select{
+  font-size: 10px;
+  min-width: 80%;
+  height: 25px;
+  margin: 12px;
+  margin-left: 10%;
+}
+.formPanel form input[type=text]{
+  font-size: 12px;
+  min-width: 80%;
+  height: 8vh;
+  margin: 12px;
+  margin-left: 10%;
+}
+.formPanel form input[type=submit]{
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  font-size: 12px;
+  margin-top: 8px;
+  min-width: 15%;
+  min-height: 2vh;
+  color: var(--primary);
+  padding: 3px;
+  background-color: var(--addtickethover);
+  border: var(--addtickethover);
+  left: 72%;
+}
+
+/* End of addTicket Panel */
+
+    .panel{
+      box-sizing: border-box;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin: 25px 0 0 0;
+      padding: 25px;
+    }
+    .addTicket{
+      box-sizing: border-box;
+      background-color: var(--secondary);
+      border: var(--secondary);
+      border-radius: 4px;
+      color: var(--primary);
+      margin-top: 2%;
+      margin-left:5% ;
+      padding: 5px;
+      position: relative;
+      min-width: 10%;
+      min-height: fit-content;
+      height: fit-content;
+      font-size: var(--tabletfontsize);
+      width: 12%;
+      cursor: pointer;
+    }
+
+    .addTicket:hover{
+      background-color: var(--addtickethover);
+
+    }
+    .filterIcon{
+      color: var(--secondary);
+      font-size: 18px;
+      height: 22px;
+      width: 100px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 12%;
+      left: 75%;
+      cursor: pointer;
+      
+    }
+    .filterIcon i{
+      margin-left: 5px;
+    }
+    
+    .tablePanel{
+      background-color: var(--primary);
+      box-sizing: border-box;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      position: absolute;
+      top: 15%;
+      left: 18%;
+      right: 20%;
+      width: 65%;
+      height: 65vh;
+      border: var(--tablepanelborder);
+      border-radius: 10px;
+    }
+  
+    table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+
+  table tr {
+    color: var(--trcolor);
+    background-color:var(--primary);
+    padding: .35em;
+  }
+  table tr:nth-of-type(even){
+    background-color: var(--tabletreven);
+  }
+  table tr:hover{
+    background-color: var(--tertiary);
+  }
+
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+
+  table th {
+    color: var(--primary);
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  table th  {
+    background-color: var(--secondary);
+  }
+      table th:first-child{
+          border-radius: 10px 0 0 0;
+      }
+      table th:last-child{
+          border-radius: 0 10px 0 0;
+      }
+
+  /* End f Tablet Content */
+    }
+
+
+  
+
+  @media screen and (min-width: 1080px) and (max-width: 1920px){
+    
+    header {
+          background-color: var(--tertiary);
+          display: inline-block;
+          min-width: 100%;
+          width: 100%;
+          height: 90px;
+          position: relative;
+      }
+    
+    
+    
+
+    /*Hamburger Icon */
+        .menu-icon{
+          display: none;
+        }
+        .menu-items{
+          display: none;
+        }
+
+      /* End of Hamburger Icon */
+
+
+      h1{
+
+          font-size: 35px;
+          color: var(--primary);
+          margin: 22px 30px 30px;
+          font-weight: 600;
+
+
+      }
+      input[type=search] {
+        border-radius: 5px;
+        min-width: 15vw;
+        max-width: 25vw;
+        float: right;
+        padding: 10px;
+        border: none;
+        margin: 25px;
+        font-size: 17px;
+        
+      }
+      
+      input[type=search]::placeholder{
+        font-size: 12px;
+        text-align: center;
+      }
+      input[type=search]:focus{
+        outline-color: var(--secondary);
+      }
+      
+    
+ 
+    
+      /* End f Header */
+      .container{
+        height: 100vh;
+        position: relative;
+        width: 100%;
+        
+      }
+      .panel {
+          width: 70vw;
+          height: 100%;
+          margin: auto;
+          top: 8%;
+          position: absolute;
+          left: 18%;
+      }
+           /*succesful Submitted*/
+           .succesfulSubmitted{
+                display: none;
+                border-radius: 2px;
+                position: absolute;
+                top: 1%;
+                left: 25%;
+                background-color: var(--addtickethover);
+                max-width: 65%;
+                width: 65%;
+                height: 35px;
+          }
+          .succesfulSubmitted h3{
+                font-size: 15px;
+                font-weight: 300;
+                text-align: center;
+                margin: 7px;
+                letter-spacing: 1px;
+          }
+          /* End of succesful Submitted */
+
+
+     /* Add Ticket Panel */
+
+     .addticketPanel{
+      display: none;
+      background-color: var(--primary);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      max-width: 45%;
+      width: 40%;
+      height: 45vh;
+      position: absolute;
+      top: 20%;
+      left: 33%;
+      border-radius: 5px 5px 0 0;
+      z-index: 1;
+    }
+    .addticketHeader{
+      position: absolute;
+      display: inline;
+      color: var(--primary);
+      background-color: var(--tertiary);
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      height: 50px;
+    }
+
+    .addticketHeader h2{
+      font-size: 20px;
+      font-weight: 200;
+      margin: 15px;
+    }
+   .addticketHeader a i{
+    color: var(--primary);
+    font-size: 20px;
+    position: absolute;
+    left: 92%;
+    top: 30%;
+   }
+   .formPanel{
+   
+    width: 100%;
+    height: 32vh;
+    position: absolute;
+    top: 15%;
+   }
+   .formPanel h5{
+    font-size: 17px;
+    font-weight: 200;
+    margin: 10px;
+   }
+  .formPanel form{
+    box-sizing: border-box;
+    display: block;
+    margin: 15px;
+    padding: 5px;
+  }
+.formPanel form label{
+  font-size: 15px;
+  margin-left: 5px;
+}
+.formPanel form select{
+  font-size: 13px;
+  max-width: 90%;
+  width: 85%;
+  max-height: 30px;
+  height: 30px;
+  margin: 12px;
+  margin-left: 10%;
+}
+.formPanel form input[type=text]{
+  font-size: 12px;
+  max-width: 90%;
+  width: 85%;
+  height: 10vh;
+  margin: 12px;
+  margin-left: 10%;
+}
+.formPanel form input[type=submit]{
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  font-size: 15px;
+  margin-top: 15px;
+  max-width: 20%;
+  width: 15%;
+  max-height: 4vh;
+  height: 3vh;
+  color: var(--primary);
+  padding: 3px;
+  background-color: var(--addtickethover);
+  border: var(--addtickethover);
+  left: 77.5%;
+}
+
+/* End of addTicket Panel */
+
+      .addTicket{
+        background-color:var(--secondary);
+        border: var(--secondary);
+        border-radius: 4px;
+        color: var(--primary);
+        padding: 5px;
+        position: relative;
+        min-width: 10%;
+        max-width: 15%;
+        min-height: fit-content;
+        height: fit-content;
+        font-size: var(--desktopfontsize);
+        width: 15%;
+        cursor: pointer;
+      }
+    
+      .addTicket:hover{
+        background-color: var(--addtickethover);
+    
+      }
+      .filterIcon{
+        color: var(--secondary);
+        font-size: 15px;
+        height: 22px;
+        width: 100px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 4%;
+        left: 97%;
+        cursor: pointer;
+        
+      }
+      .filterIcon i{
+        margin-left: 5px;
+      } 
+      
+   
+    .sidebar {
+      height: 100%;
+      width: 110px;
+      position: absolute;
+      left: 0;
+      background-color:var(--sidebarbgcolor);
+      padding-top: 20px;
+      filter: drop-shadow(0px 4px 4px rgba(203, 235, 254, 1));
+      z-index: 4;
+  }
+    .fa-ticket::before {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+
+    .fa-ticket::before {
+      font-size: 30px;
+      color: var(--secondary);
+    }
+
+    .fa-user-friends::before {
+      font-size: 30px;
+      color: var(--secondary);
+    }
+    .fa-user-circle::before{
+      font-size: 30px;
+      color: var(--secondary);
+    }  
+    .fa-sign-out-alt::before{
+      font-size: 30px;
+      color: var(--secondary);
+  
+    } 
+
+      .sidebar a {
+        padding: 30px;
+        text-decoration: none;
+        color: var(--sidebarAcolor);
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 8px;
+      }
+      .sidebar a:hover{
+        color: var(--sidebarHovercolor);
+        background-color:var(--primary); 
+        
+      }
+
+      a:nth-child(4){
+            font-size: 8px;
+            margin-top: 250px;
+        }
+     
+      .sidebar a:nth-child(4):hover{
+          color: var(--primary);
+          background-color: var(--editicon);
+      }
+    
+
+      .ticket{
+
+        width: fit-content;
+        background: none;
+        border: none;
+        padding: 5px;
+        width: 100%;
+      }
+      .tablePanel{
+        background-color: var(--primary);
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(221 ,221, 221,1));
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        right: 20%;
+        width: 100%;
+        height: 65vh;
+        border-radius: 10px;
+      }
+      
+      table {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    table caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em;
+    }
+    
+    table tr {
+        color: var(--trcolor);
+        padding: .35em;
+        
+    }
+
+    table tr:nth-of-type(even){
+      background-color: var(--tabletreven);
+    }
+    table tr:hover{
+      background-color: var(--tertiary);
+    }
+    
+    table th,
+    table td {
+      padding: .625em;
+      text-align: center;
+    }
+    
+    table th {
+      color: var(--primary);
+      font-size: 1em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    table th  {
+      background-color: var(--secondary);
+    }
+    table th:first-child{
+        border-radius: 10px 0 0 0;
+    }
+    table th:last-child{
+        border-radius: 0 10px 0 0;
+    }
+    
+
+      /*end of laptop content */
+
+  }
+
+
+
+
+
+  @media screen and (min-width: 1920px) {
+      header {
+          background-color: var(--tertiary);
+          display: inline-block;
+          min-width: 100%;
+          width: 100%;
+          height: 90px
+          
+      }
+
+      .menu-icon{
+        display: none;
+      }
+      .menu-items{
+        display: none;
+      }
+    h1 {
+        font-size: 35px;
+        color: var(--primary);
+        margin: 25px 30px 30px;
+        font-weight: 600;
+        letter-spacing: 4px;
+    }
+
+    input[type=search] {
+      border-radius: 5px;
+      min-width: 15vw;
+      max-width: 25vw;
+      float: right;
+      padding: 10px;
+      border: none;
+      margin: 25px;
+      font-size: 17px;
+      width: 20vw;
+
+  }
+
+    input[type=search]::placeholder {
+        font-size: 12px;
+        text-align: center;
+    }
+    input[type=search]:focus{
+      outline-color: var(--secondary);
+    }
+      
+    
+    .filterIcon{
+        color: var(--secondary);
+        font-size: 20px;
+        height: 22px;
+        width: 100px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 3%;
+        left: 98%;
+        cursor: pointer;
+        
+      }
+      .sidebar {
+          height: 100%;
+          width: 110px;
+          position: absolute;
+          left: 0;
+          background-color: var(--sidebarbgcolor);
+          padding-top: 20px;
+          filter: drop-shadow(0px 4px 4px rgba(203, 235, 254, 1));
+      }
+
+      .sidebar a {
+        padding: 30px;
+        text-decoration: none;
+        color: var(--sidebarAcolor);
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 8px;
+    }
+    a:nth-child(4){
+      font-size: 8px;
+      margin-top: 250px;
+  }
+      .sidebar a:hover {
+          color: var(--sidebarHovercolor);
+          background-color: var(--primary);
+      }
+      .sidebar a:nth-child(4):hover{
+          color: var(--primary);
+          background-color: var(--editicon);
+      }
+      .fa-ticket::before {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+
+    .fa-user-friends::before {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+    .fa-user-circle::before{
+        font-size: 30px;
+        color: var(--secondary);
+    }
+    .sidebar a:nth-child(4):hover{
+        color: var(--sidebarHovercolor);
+        background-color: var(--editicon);
+    }
+    .fa-sign-out-alt::before{
+        font-size: 30px;
+        color: var(--secondary);
+
+    }
+     
+
+      .container {
+          height: 100vh;
+          position: relative;
+          width: 100%;
+      }
+             /*succesful Submitted*/
+             .succesfulSubmitted{
+              display: none;
+              border-radius: 2px;
+              position: absolute;
+              top: 1%;
+              left: 24%;
+              background-color: var(--addtickethover);
+              max-width: 60%;
+              width: 60%;
+              height: 35px;
+            }
+            .succesfulSubmitted h3{
+              font-size: 15px;
+              font-weight: 300;
+              text-align: center;
+              margin: 7px;
+              letter-spacing: 1px;
+            }
+            /* End of succesful Submitted */
+
+
+           /* Add Ticket Panel */
+     .addticketPanel{
+      display: none;
+      background-color: var(--primary);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      max-width: 40%;
+      width: 30%;
+      height: 45vh;
+      position: absolute;
+      top: 20%;
+      left: 35%;
+      border-radius: 5px 5px 0 0;
+      z-index: 1;
+      transition: all ease-in-out .5s;
+    }
+
+    .addticketHeader{
+      position: absolute;
+      display: inline;
+      color: var(--primary);
+      background-color: var(--tertiary);
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      height: 50px;
+    }
+
+    .addticketHeader h2{
+      font-size: 20px;
+      font-weight: 200;
+      margin: 15px;
+    }
+   .addticketHeader a i{
+    color: var(--primary);
+    font-size: 20px;
+    position: absolute;
+    left: 92%;
+    top: 30%;
+   }
+   .formPanel{
+   
+    width: 100%;
+    height: 32vh;
+    position: absolute;
+    top: 15%;
+   }
+   .formPanel h5{
+    font-size: 17px;
+    font-weight: 200;
+    margin: 10px;
+   }
+  .formPanel form{
+    box-sizing: border-box;
+    display: block;
+    margin: 15px;
+    padding: 5px;
+  }
+.formPanel form label{
+  font-size: 15px;
+  margin-left: 5px;
+}
+.formPanel form select{
+  font-size: 13px;
+  max-width: 90%;
+  width: 85%;
+  max-height: 30px;
+  height: 30px;
+  margin: 12px;
+  margin-left: 10%;
+}
+.formPanel form input[type=text]{
+  font-size: 12px;
+  max-width: 90%;
+  width: 85%;
+  height: 10vh;
+  margin: 12px;
+  margin-left: 10%;
+}
+.formPanel form input[type=submit]{
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  font-size: 15px;
+  margin-top: 15px;
+  max-width: 20%;
+  width: 15%;
+  max-height: 4vh;
+  height: 3vh;
+  color: var(--primary);
+  padding: 3px;
+  background-color: var(--addtickethover);
+  border: var(--addtickethover);
+  left: 77.5%;
+}
+
+/* End of addTicket Panel */
+
+
+      .panel {
+          width: 70vw;
+          height: 100%;
+          margin: auto;
+          top: 8%;
+          position: absolute;
+          left: 15%;
+      }
+
+      .addTicket {
+          background-color: var(--secondary);
+          border: var(--secondary);
+          border-radius: 4px;
+          color: var(--primary);
+          padding: 5px;
+          position: relative;
+          min-width: 10%;
+          max-width: 15%;
+          min-height: fit-content;
+          height: fit-content;
+          font-size: 20px;
+          cursor: pointer;
+      }
+
+      .addTicket:hover {
+          background-color: var(--addtickethover);
+
+      }
+
+      .tablePanel{
+        background-color: var(--primary);
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(221 ,221, 221,1));
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        right: 20%;
+        width: 100%;
+        height: 65vh;
+        border-radius: 10px;
+      }
+
+      table {
+          border-collapse: collapse;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          table-layout: fixed;
+      }
+
+      table caption {
+          font-size: 1.5em;
+          margin: .5em 0 .75em;
+      }
+
+      table tr {
+          padding: .35em;
+      }
+      table tr:hover{
+        background-color: var(--primary);
+      }
+      table tr:nth-of-type(even){
+        background-color: var(--tabletreven);
+      }
+
+      table th,
+      table td {
+          padding: .625em;
+          text-align: center;
+      }
+
+      table td {
+          font-size: 20px;
+      }
+
+      table th {
+          color: var(--primary);
+          font-size: 1.2em;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+      }
+
+      table th {
+          background-color: var(--secondary);
+      }
+
+      table th:first-child {
+          border-radius: 10px 0 0 0;
+      }
+
+      table th:last-child {
+          border-radius: 0 10px 0 0;
+      }
+      .container-bg {
+        height: 100vh;
+        position: relative;
+        opacity: .5;
+        width: 100%;
+    }
+
+  }
+
+

@@ -1,0 +1,621 @@
+
+.container {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+
+}
+
+
+.panel {
+  width: 70vw;
+  height: 100%;
+  margin: auto;
+  top: 170px;
+  position: absolute;
+  left: 20%;
+  
+}
+
+.tablePanel {
+  
+  background-color: var(--primary);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(221 ,221, 221,1));
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  right: 20%;
+  max-width: 65%;
+  height: 60vh;
+  border: var(--tablepanelborder);
+  border-radius: 10px;
+
+
+}
+.topDetails {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 5%;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--secondary);
+    font-weight: 550;
+}
+
+
+.topDetails a i {
+    float: right;
+    margin-right: 15%;
+    font-size: 25px;
+    color: var(--editicon);
+
+}
+
+.fa-ticket::before {
+    font-size: 30px;
+    color: var(--secondary);
+}
+
+.fa-user-friends::before {
+    font-size: 30px;
+    color: var(--secondary);
+}
+.fa-user-circle::before{
+    font-size: 30px;
+    color: var(--secondary);
+}
+.sidebar a:nth-child(4):hover{
+    color: var(--primary);
+    background-color: var(--editicon);
+}
+.fa-sign-out-alt::before{
+    font-size: 30px;
+    color: var(--secondary);;
+
+}
+a:nth-child(4){
+    font-size: 8px;
+    margin-top: 250px;
+ }
+
+
+ .tablePanel .basicInfo table{
+    border: none;
+    font-size: 15px;
+    height: 200px;
+    min-width: 75%;
+    margin: auto;
+    position: relative;
+   
+}
+
+.basicInfo {
+    position: relative;
+    min-height: 40%;
+    margin-top: 30px;
+
+}
+
+
+.basicInfo h5 {
+    color: var(--tertiary);
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 10px 10px 10px 10%;
+    font-weight: 200;
+}
+
+
+ .basicInfo td input[type="text"]{
+    font-size: 15px;
+    border: none;
+    width: 90%;
+    height: 3vh;
+    color: #526D82;
+}
+
+.userInfo {
+    position: relative;
+    min-height: 40%;
+    margin-top: 30px;
+
+}
+
+.userInfo h5 {
+    color: var(--tertiary);
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin: 10px 10px 10px 10%;
+    font-weight: 200;
+}
+
+.tablePanel .userInfo table{
+    border: none;
+    font-size: 15px;
+    height: 200px;
+    min-width: 75%;
+    margin: auto;
+    position: relative;
+   
+}
+.userInfo input[type="text"]{
+font-size: 15px;
+border: none;
+width: 90%;
+height: 3vh;
+color: #526D82;
+
+}
+.userInfo input[type="password"]{
+font-size: 15px;
+border: none;
+width: 90%;
+height: 3vh;
+color: #526D82;
+}
+.userInfo input[type="email"]{
+font-size: 15px;
+border: none;
+width: 90%;
+height: 3vh;
+color: #526D82;
+}
+
+.basicInfo td input[type="text"]:disabled{
+background-color: var(--primary);
+}
+.userInfo input[type="text"]:disabled{
+background-color: var(--primary);
+}
+.userInfo input[type="password"]:disabled{
+background-color: var(--primary);
+}
+.userInfo input[type="email"]:disabled{
+background-color: var(--primary);
+}
+@media screen and (max-width: 720px) {
+    body{
+        overflow: visible;
+    }
+    .container {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+
+
+    }
+
+    .panel {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 75px 0 0 25px;
+        padding: 25px;
+
+    }
+
+    .tablePanel {
+        background-color: var(--primary);
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(221 ,221, 221,1));
+        position: absolute;
+        top: 100px;
+        left: 18%;
+        right: 20%;
+        width: 65%;
+        height: auto;
+        border: var(--tablepanelborder);
+        border-radius: 10px;
+    }
+
+    .tablePanel .basicInfo table{
+            
+            border: none;
+            font-size: 15px;
+            height: 200px;
+            min-width: 75%;
+            margin: auto;
+            position: relative;
+
+    }
+
+  
+    .topDetails{
+        width: 100%;
+        height: 5%;
+        display: inline-block;
+        font-size: 20px;
+        color: var(--secondary);
+        font-weight: 550;
+    }
+    .topDetails a i {
+        float: right;
+        margin-right: 15%;
+        font-size: 25px;
+        color: var(--editicon);
+    
+    }
+
+    .basicInfo{
+        position: relative;
+        min-height: 40%;
+        margin-top: 5%;
+    }
+    .basicInfo h5{
+            color: var(--tertiary);
+            letter-spacing: 2px;
+            font-size: 15px;
+            margin: 10px;
+    }
+    .basicInfo input, .userInfo input{
+        border: none;
+    }
+
+
+
+    .userInfo{
+            width: 100%;
+            min-height: 40%;
+        }
+    .userInfo h5{
+            color: var(--tertiary);
+            letter-spacing: 2px;
+            font-size: 15px;
+            margin: 10px;
+        }
+    .tablePanel .userInfo table{
+            
+            border: none;
+            font-size: 15px;
+            height: 200px;
+            width: 75%;
+            margin: auto;
+
+    }
+    table td{
+        color: var(--trcolor);
+    }
+  
+    .basicInfo td input[type="text"]:disabled{
+        background-color: var(--primary);
+    }
+    .userInfo input[type="text"]:disabled{
+        background-color: var(--primary);
+    }
+    .userInfo input[type="password"]:disabled{
+        background-color: var(--primary);
+    }
+    .userInfo input[type="email"]:disabled{
+        background-color: var(--primary);
+    }
+
+}
+@media screen and (min-width: 720px) and (max-width: 1080px){
+    body{
+        overflow: auto;
+    }
+    .container {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+
+
+    }
+
+    .panel {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 60px 0 0 0;
+        padding: 25px;
+
+    }
+
+    .tablePanel {
+        background-color: var(--primary);
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(221 ,221, 221,1));
+        position: absolute;
+        top: 100px;
+        left: 18%;
+        right: 20%;
+        width: 65%;
+        height: auto;
+        border: var(--tablepanelborder);
+        border-radius: 10px;
+    }
+      .tablePanel .basicInfo table{
+            
+            border: none;
+            font-size: 16px;
+            height: 200px;
+            min-width: 75%;
+            margin: auto;
+            position: relative;
+
+    }
+
+
+
+    .tablePanel .userInfo table{
+            
+            border: none;
+            font-size: 16px;
+            height: 200px;
+            width: 75%;
+            margin: auto;
+
+ }
+
+    .topDetails{
+        width: 100%;
+        height: 5%;
+        display: inline-block;
+        font-size: 25px;
+        color: var(--secondary);
+        font-weight: 550;
+    }
+    .topDetails a i {
+        float: right;
+        margin-right: 15%;
+        font-size: 25px;
+        color: var(--editicon);
+    
+    }
+    .basicInfo{
+        width: 100%;
+        position: relative;
+        min-height: 40%;
+        margin-top: 30px;
+
+    }
+    .basicInfo h5{
+        color: var(--tertiary);
+        letter-spacing: 2px;
+        font-size: 18px;
+        margin: 10px 10px 10px 10%;
+    }
+
+
+
+    .userInfo{
+        position: relative;
+        width: 100%;
+        min-height: 40%;
+    }
+    .userInfo h5{
+        color: var(--tertiary);
+        letter-spacing: 2px;
+        font-size: 18px;
+        margin: 10px 10px 10px 10%;
+    }
+    .basicInfo input, .userInfo input{
+        border: none;
+    }
+    
+
+    .basicInfo td input[type="text"]{
+        width: 100%;
+        height: 3vh;
+        color: #526D82;
+    }
+    .userInfo td input[type="text"]{
+        width: 100%;
+        height: 3vh;
+        color: #526D82;
+    }
+
+    .userInfo td input[type="password"]{
+        width: 100%;
+        height: 3vh;
+        color: #526D82;
+    }
+    .userInfo td input[type="email"]{
+        width: 100%;
+        height: 3vh;
+        color: #526D82;
+    }
+    
+    .basicInfo td input[type="text"]:disabled{
+        background-color: var(--primary);
+    }
+    .userInfo input[type="text"]:disabled{
+        background-color: var(--primary);
+    }
+    .userInfo input[type="password"]:disabled{
+        background-color: var(--primary);
+    }
+    .userInfo input[type="email"]:disabled{
+        background-color: var(--primary);
+    }
+
+}
+@media screen and (min-width: 1080px) and (max-width: 1920px){
+    .container {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+
+    }
+
+
+    .panel {
+        width: 70vw;
+        height: 100%;
+        margin: auto;
+        top: 200px;
+        position: absolute;
+        left: 20%;
+        
+    }
+
+    .tablePanel {
+        
+        background-color: var(--primary);
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(221 ,221, 221,1));
+        position: absolute;
+        top: 65%;
+        left: 17%;
+        right: 20%;
+        max-width: 80%;
+        height: 60vh;
+        border: var(--tablepanelborder);
+        border-radius: 10px;
+    
+
+    }
+
+
+    .topDetails {
+        position: absolute;
+        top: 5%;
+        width: 100%;
+        height: 5%;
+        display: inline-block;
+        font-size: 20px;
+        color: var(--secondary);
+        font-weight: 550;
+    }
+
+    .topDetails a i {
+        float: right;
+        margin-right: 15%;
+        font-size: 25px;
+        color: var(--editicon);
+    
+    }
+   
+   
+
+    .fa-ticket::before {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+
+    .fa-user-friends::before {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+    .fa-user-circle::before{
+        font-size: 30px;
+        color: var(--secondary);
+    }
+    .sidebar a:nth-child(4):hover{
+        color: var(--primary);
+        background-color: var(--editicon);
+    }
+    .fa-sign-out-alt::before{
+        font-size: 30px;
+        color: var(--secondary);;
+
+    }
+    a:nth-child(4){
+        font-size: 8px;
+        margin-top: 250px;
+     }
+
+
+     .tablePanel .basicInfo table{
+        border: none;
+        font-size: 15px;
+        height: 200px;
+        min-width: 75%;
+        margin: auto;
+        position: relative;
+       
+    }
+
+    .basicInfo {
+        position: relative;
+        min-height: 40%;
+        margin-top: 30px;
+
+    }
+
+
+    .basicInfo h5 {
+        color: var(--tertiary);
+        letter-spacing: 2px;
+        font-size: 20px;
+        margin: 10px 10px 10px 10%;
+        font-weight: 200;
+    }
+
+
+     .basicInfo td input[type="text"]{
+        font-size: 15px;
+        border: none;
+        width: 90%;
+        height: 3vh;
+        color: #526D82;
+    }
+
+
+    .userInfo {
+        position: relative;
+        min-height: 40%;
+        margin-top: 30px;
+    }
+    
+    .userInfo h5 {
+        color: var(--tertiary);
+        letter-spacing: 2px;
+        font-size: 18px;
+        margin: 10px 10px 10px 10%;
+        font-weight: 200;
+    }
+    
+    .tablePanel .userInfo table{
+        border: none;
+        font-size: 15px;
+        height: 200px;
+        min-width: 75%;
+        margin: auto;
+        position: relative;
+       
+}
+.userInfo input[type="text"]{
+    font-size: 15px;
+    border: none;
+    width: 90%;
+    height: 3vh;
+    color: #526D82;
+
+}
+.userInfo input[type="password"]{
+    font-size: 15px;
+    border: none;
+    width: 90%;
+    height: 3vh;
+    color: #526D82;
+}
+.userInfo input[type="email"]{
+    font-size: 15px;
+    border: none;
+    width: 90%;
+    height: 3vh;
+    color: #526D82;
+}
+
+.basicInfo td input[type="text"]:disabled{
+    background-color: var(--primary);
+}
+.userInfo input[type="text"]:disabled{
+    background-color: var(--primary);
+}
+.userInfo input[type="password"]:disabled{
+    background-color: var(--primary);
+}
+.userInfo input[type="email"]:disabled{
+    background-color: var(--primary);
+}
+
+}
+
