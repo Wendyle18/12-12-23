@@ -18,7 +18,7 @@
                 <h1>SysGuard Ticketing System</h1>
             </div>
             <div class="panelForm">
-            <form action="<?= BASE_URL. "login"?>"  method="POST" class= "loginform <?=$label?>">
+            <form action="<?= BASE_URL?>"  method="POST" class= "loginform <?=$label?>">
                         <div class="clr <?=$label?>">
                             <p class= "errorlabel <?=$label?>" > <?= $labelindicator?> </p> 
                             <input type="text" id="uname" name="username" placeholder="Username" value ="<?= isset($username) ? ($username) : ""?>"><br><br>
